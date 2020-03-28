@@ -8,6 +8,7 @@
     
 <%= form_with(model: @user, local: true) do |f| %>
 
+<%= render 'layouts/error_messages', model: f.object %>
       
       <div class="form-group">
         
@@ -47,11 +48,6 @@
 
       
 <%= f.submit 'Sign up', class: 'btn btn-primary btn-block' %>
-
-<%= form_with(model: @user, local: true) do |f| %>
-
-      
-<%= render 'layouts/error_messages', model: f.object %>
 
     
 <% end %>
